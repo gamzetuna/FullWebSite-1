@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My X-Blog</title>
+    <script src="https://kit.fontawesome.com/85837175c8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="main">
+        <header>
+            <div id="baglantilar">
+                <div id="personal">
+                    <a href="#">
+                        <i class="fa-solid fa-envelope"></i>
+                        e-mail |
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-phone"></i>
+                        0555 555 55 55 | X-Store &reg;
+                    </a>
+                </div>
+                <div id="socialMedia">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-square"></i>
+                        facebook |
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                        instagram |
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+            <div id="myXBlog">
+                <h1>My X-Blog</h1>
+                <p>Farklı bir X-Blog deneyimi için hazır mısınız?</p>
+            </div>
+        </header>
+        <nav>
+            <div id="menu">
+                <a href="#">Anasayfa</a>
+                <a href="#">Hakkımızda</a>
+                <a href="#">Ürünler</a>
+                <a href="#">İletişim</a>
+            </div>
+            <input id="arama" type="text" value="Aramak istediğiniz şeyi giriniz..." />
+        </nav>
+
+        <section id="icerik">
+            <div id="notlar">
+                <div id="not1">
+                    <h1>Tatilden Notlar 1</h1>
+                    <h4>Title description, Mar 7, 2022</h4>
+                    <img src="Images/plaj.jpg" />
+                    <p>What is Lorem Ipsum?</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div id="not2">
+                    <h1>Tatilden Notlar 2</h1>
+                    <h4>Title description, Mar 7, 2022</h4>
+                    <img src="Images/sahil.jpg" />
+                    <p>What is Lorem Ipsum?</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div id="not3">
+                    <h1>Tatilden Notlar 3</h1>
+                    <h4>Title description, Mar 7, 2022</h4>
+                    <img src="Images/yayla.jpeg" />
+                    <p>What is Lorem Ipsum?</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+            </div>
+            <div id="info">
+                <div>
+                    <h1>Yazar Hakkında</h1>
+                    <p>Aşağıdaki yazar için</p>
+                    <img src="Images/yazar.jpeg" style="border-radius: 100px;" />
+                    <p>What is Lorem Ipsum?</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div>
+                    <h1>Social Media Buttons</h1>
+                    <div id="socialMediaButtons">
+                        <a href="#"><i class="fa-brands fa-facebook" style="color: #4267B2;"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter" style="color: #1D9BF0;"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus" style="color: #DB4437"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #0072b1;"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube" style="color: #FF0000;"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram" style="color: #6d6d6d;"></i></a>
+                        <a href="#"><i class="fa-solid fa-rss" style="color: #ee802f;"></i></a>
+                        <a href="#"><i class="fa-brands fa-vk" style="color: #4C75A3;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <h1>Footer</h1>
+        </footer>
+    </div>
+    <a class="scrollToTopBtn"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    <script>
+        var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+        var rootElement = document.documentElement;
+
+        function handleScroll() {
+            // Do something on scroll
+            if (rootElement.scrollTop > 100) {
+                // Show button
+                scrollToTopBtn.classList.add("showBtn");
+            } else {
+                // Hide button
+                scrollToTopBtn.classList.remove("showBtn");
+            }
+        }
+
+        function scrollToTop() {
+            // Scroll to top logic
+            rootElement.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        scrollToTopBtn.addEventListener("click", scrollToTop);
+        document.addEventListener("scroll", handleScroll);
+    </script>
+</body>
+</html>

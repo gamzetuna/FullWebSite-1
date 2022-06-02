@@ -1,0 +1,294 @@
+﻿body {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    min-width: 335px;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+#main {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1200px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#baglantilar {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+}
+
+#personal {
+    padding: 10px;
+}
+
+    #personal > a {
+        padding-right: 5px;
+        text-decoration: none;
+        color: black;
+    }
+
+        #personal > a:hover {
+            color: white;
+        }
+
+#socialMedia {
+    padding: 10px;
+}
+
+    #socialMedia > a {
+        padding-left: 5px;
+        text-decoration: none;
+        color: black;
+    }
+
+        #socialMedia > a:hover {
+            color: white;
+        }
+
+
+#myXBlog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradientBG 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+
+nav {
+    display: flex;
+    background-color: #141414;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+
+    #menu > a {
+        padding-right: 15px;
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+    }
+
+        #menu > a:hover {
+            color: black;
+            background-color: lightgray;
+        }
+
+#arama {
+    height: 30px;
+    width: 365px;
+    margin-right: 25px;
+}
+
+#icerik {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 1200px;
+}
+
+p {
+    text-align: justify;
+}
+
+#notlar {
+    flex-basis: 720px;
+    padding: 15px;
+    padding-right: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+}
+
+#info {
+    flex-basis: 370px;
+    background-color: lightgray;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#socialMediaButtons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    #socialMediaButtons > a {
+        width: 33%;
+        height: 70px;
+        font-size: 60px;
+        margin: 10px 0px;
+        text-align: center;
+        cursor: default;
+    }
+
+        #socialMediaButtons > a > i {
+            cursor: pointer;
+        }
+
+            #socialMediaButtons > a > i:hover {
+                transform: scale(1.2);
+            }
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
+    border-radius: 100%;
+    visibility: hidden;
+    z-index: 100;
+}
+
+    .scrollToTopBtn > i {
+        font-size: 50px;
+    }
+
+        .scrollToTopBtn > i:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+.showBtn {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    body {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    #main {
+        margin: 0px auto;
+    }
+
+    #baglantilar {
+        justify-content: center;
+    }
+
+    #personal {
+        padding-right: 0px;
+    }
+
+    #socialMediaButtons > a {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    nav {
+        position: relative;
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        top: 0px;
+        flex-direction: column;
+    }
+
+    #menu {
+        flex-direction: column;
+    }
+
+        #menu > a {
+            height: 25px;
+            border-bottom: 1px solid slategray;
+            padding: 5px;
+        }
+
+    #arama {
+        width: auto;
+        margin-right: 0px;
+    }
+
+    #icerik {
+        flex-direction: column;
+    }
+
+    #notlar {
+        padding-right: 15px;
+    }
+
+    #info {
+        flex-basis: 370px;
+        background-color: lightgray;
+        padding: 15px;
+    }
+
+    #socialMediaButtons > a {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    #baglantilar {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: aqua;
+    }
+
+    #personal {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+
+    #socialMedia {
+        display: flex;
+        justify-content: center;
+    }
+
+    #socialMediaButtons > a {
+        width: 70px;
+        height: 50px;
+        font-size: 40px;
+        margin: 0px;
+        padding-bottom: 10px;
+    }
+}
+
